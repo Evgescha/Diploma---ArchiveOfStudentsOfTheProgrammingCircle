@@ -88,5 +88,10 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         {
             new Competitions().Show();
         }
+
+        private void вкладВРазвитиеКружкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new MoneyGetting().Show();
+        }
     }
 }
