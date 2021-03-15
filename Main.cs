@@ -25,13 +25,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.журнал_оценокTableAdapter.Fill(this.archiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "archiveOfStudentsOfTheProgrammingCircleDataSet.темы". При необходимости она может быть перемещена или удалена.
             this.темыTableAdapter.Fill(this.archiveOfStudentsOfTheProgrammingCircleDataSet.темы);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "archiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок". При необходимости она может быть перемещена или удалена.
-            this.журнал_оценокTableAdapter.Fill(this.archiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "archiveOfStudentsOfTheProgrammingCircleDataSet.темы". При необходимости она может быть перемещена или удалена.
-            this.темыTableAdapter.Fill(this.archiveOfStudentsOfTheProgrammingCircleDataSet.темы);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "archiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок". При необходимости она может быть перемещена или удалена.
-            this.журнал_оценокTableAdapter.Fill(this.archiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок);
-
+           
         }
 
         private void dataGridView2_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -39,7 +33,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
 
         }
 
-        private void toolStripLabel2_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
             // включаем код в обработчик ошибок
             try
@@ -59,9 +53,10 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             }
             // вне зависимости от того, обновили даныне или нет, обновляем данные в текущей таблице, чтобы они всегда оставались актуальными
             this.темыTableAdapter.Fill(archiveOfStudentsOfTheProgrammingCircleDataSet.темы);
+
         }
 
-        private void toolStripLabel3_Click(object sender, EventArgs e)
+        private void toolStripButton2_Click(object sender, EventArgs e)
         {
             // включаем код в обработчик ошибок
             try
@@ -81,6 +76,12 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             }
             // вне зависимости от того, обновили даныне или нет, обновляем данные в текущей таблице, чтобы они всегда оставались актуальными
             this.журнал_оценокTableAdapter.Fill(archiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок);
+
+        }
+
+        private void учащиесяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Schooler().Show();
         }
     }
 }
