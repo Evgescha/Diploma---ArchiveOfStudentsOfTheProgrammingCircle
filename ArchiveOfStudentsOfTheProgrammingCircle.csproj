@@ -62,6 +62,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArchiveOfStudentsOfTheProgrammingCircleDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Competitions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Competitions.Designer.cs">
+      <DependentUpon>Competitions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="Schooler.Designer.cs">
       <DependentUpon>Schooler.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Competitions.resx">
+      <DependentUpon>Competitions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

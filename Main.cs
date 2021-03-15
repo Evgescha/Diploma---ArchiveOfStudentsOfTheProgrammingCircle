@@ -83,5 +83,10 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         {
             new Schooler().Show();
         }
+
+        private void соревнованияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Competitions().Show();
+        }
     }
 }
