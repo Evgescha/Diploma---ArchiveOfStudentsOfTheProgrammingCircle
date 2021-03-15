@@ -7786,12 +7786,54 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgramm
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `Код`, `Фамилия`, `Имя`, `Отчество`, `Школа`, `Класс`, `Дата регистрации` " +
                 "FROM `archiveofstudentsoftheprogrammingcircle`.`учащийся`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT `Код`, `Фамилия`, `Имя`, `Отчество`, `Школа`, `Класс`, `Дата регистрации` " +
+                "FROM `archiveofstudentsoftheprogrammingcircle`.`учащийся`\r\nWHERE  `Фамилия` LIKE" +
+                " ? OR  `Имя` LIKE ? OR  `Отчество` LIKE ? OR  `Школа` LIKE ?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param1";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "Фамилия";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param2";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "Имя";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param3";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "Отчество";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param4";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "Школа";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7816,6 +7858,43 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgramm
             ArchiveOfStudentsOfTheProgrammingCircleDataSet.учащийсяDataTable dataTable = new ArchiveOfStudentsOfTheProgrammingCircleDataSet.учащийсяDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByFirstSurLastnameSchool(ArchiveOfStudentsOfTheProgrammingCircleDataSet.учащийсяDataTable dataTable, string Param1, string Param2, string Param3, string Param4) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Param1 == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            if ((Param2 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
+            }
+            if ((Param3 == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Param3));
+            }
+            if ((Param4 == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Param4));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

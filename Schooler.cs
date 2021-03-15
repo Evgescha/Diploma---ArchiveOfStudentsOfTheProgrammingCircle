@@ -84,5 +84,11 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         {
             Main.main.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            this.учащийсяTableAdapter.FillByFirstSurLastnameSchool(this.archiveOfStudentsOfTheProgrammingCircleDataSet.учащийся, $"%{textBox1.Text}%", $"%{textBox1.Text}%", $"%{textBox1.Text}%", $"%{textBox1.Text}%");
+        }
     }
 }

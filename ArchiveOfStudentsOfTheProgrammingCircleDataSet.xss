@@ -12,18 +12,22 @@
     <Shape ID="DesignTable:соревнование" ZOrder="10" X="715" Y="535" Height="210" Width="230" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:темы" ZOrder="9" X="654" Y="293" Height="172" Width="203" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:участники сорвевнований" ZOrder="8" X="345" Y="535" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
-    <Shape ID="DesignTable:учащийся" ZOrder="7" X="70" Y="70" Height="210" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
+    <Shape ID="DesignTable:учащийся" ZOrder="7" X="70" Y="70" Height="229" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:вклад в развитие_ibfk_1" ZOrder="6" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>275</X>
-          <Y>146</Y>
+          <X>370</X>
+          <Y>240</Y>
         </Point>
         <Point>
-          <X>345</X>
-          <Y>146</Y>
+          <X>387</X>
+          <Y>240</Y>
+        </Point>
+        <Point>
+          <X>387</X>
+          <Y>223</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -31,7 +35,7 @@
       <RoutePoints>
         <Point>
           <X>258</X>
-          <Y>280</Y>
+          <Y>299</Y>
         </Point>
         <Point>
           <X>258</X>
@@ -83,7 +87,7 @@
       <RoutePoints>
         <Point>
           <X>250</X>
-          <Y>280</Y>
+          <Y>299</Y>
         </Point>
         <Point>
           <X>250</X>
