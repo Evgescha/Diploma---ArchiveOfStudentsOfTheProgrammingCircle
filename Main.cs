@@ -109,5 +109,10 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         {
             this.темыTableAdapter.FillByThemeName(this.archiveOfStudentsOfTheProgrammingCircleDataSet.темы, $"%{textBox1.Text}%");
         }
+
+        private void первыйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Report1().Show();
+        }
     }
 }
