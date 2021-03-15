@@ -105,5 +105,9 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         {
             updateForm();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.темыTableAdapter.FillByThemeName(this.archiveOfStudentsOfTheProgrammingCircleDataSet.темы, $"%{textBox1.Text}%");
+        }
     }
 }
