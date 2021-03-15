@@ -81,6 +81,8 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.темаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.оценкаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.присутствалDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -104,7 +106,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(12, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(450, 222);
+            this.groupBox1.Size = new System.Drawing.Size(509, 222);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Темы";
@@ -135,7 +137,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(444, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(503, 25);
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -261,7 +263,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.dataGridView1.DataSource = this.темыBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 44);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(438, 172);
+            this.dataGridView1.Size = new System.Drawing.Size(497, 172);
             this.dataGridView1.TabIndex = 1;
             // 
             // кодDataGridViewTextBoxColumn
@@ -302,7 +304,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.Location = new System.Drawing.Point(12, 257);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(450, 222);
+            this.groupBox2.Size = new System.Drawing.Size(509, 222);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Оценки за темы";
@@ -333,7 +335,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(444, 25);
+            this.bindingNavigator2.Size = new System.Drawing.Size(503, 25);
             this.bindingNavigator2.TabIndex = 2;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -450,7 +452,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.dataGridView2.DataSource = this.журналОценокibfk2BindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(6, 44);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(438, 172);
+            this.dataGridView2.Size = new System.Drawing.Size(497, 172);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);
             // 
@@ -476,10 +478,12 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.учащиесяToolStripMenuItem,
             this.соревнованияToolStripMenuItem,
-            this.вкладВРазвитиеКружкаToolStripMenuItem});
+            this.вкладВРазвитиеКружкаToolStripMenuItem,
+            this.отчетыToolStripMenuItem,
+            this.обновитьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(474, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(533, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -552,11 +556,24 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.присутствалDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.присутствалDataGridViewCheckBoxColumn.Width = 78;
             // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            // 
+            // обновитьToolStripMenuItem
+            // 
+            this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.обновитьToolStripMenuItem.Text = "Обновить";
+            this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 491);
+            this.ClientSize = new System.Drawing.Size(533, 491);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -639,6 +656,8 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         private System.Windows.Forms.ToolStripMenuItem учащиесяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem соревнованияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вкладВРазвитиеКружкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
     }
 }
 

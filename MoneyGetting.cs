@@ -48,5 +48,10 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.вклад_в_развитиеTableAdapter.Fill(archiveOfStudentsOfTheProgrammingCircleDataSet.вклад_в_развитие);
 
         }
+
+        private void MoneyGetting_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Main.main.Show();
+        }
     }
 }

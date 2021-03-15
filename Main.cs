@@ -12,22 +12,26 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
 {
     public partial class Main : Form
     {
+        public static Main main;
         public Main()
         {
             InitializeComponent();
+            main = this;
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
+            updateForm();
+        }
+        private void updateForm() {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "archiveOfStudentsOfTheProgrammingCircleDataSet.учащийся". При необходимости она может быть перемещена или удалена.
             this.учащийсяTableAdapter.Fill(this.archiveOfStudentsOfTheProgrammingCircleDataSet.учащийся);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "archiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок". При необходимости она может быть перемещена или удалена.
             this.журнал_оценокTableAdapter.Fill(this.archiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "archiveOfStudentsOfTheProgrammingCircleDataSet.темы". При необходимости она может быть перемещена или удалена.
             this.темыTableAdapter.Fill(this.archiveOfStudentsOfTheProgrammingCircleDataSet.темы);
-           
-        }
 
+        }
         private void dataGridView2_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
@@ -82,16 +86,24 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         private void учащиесяToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Schooler().Show();
+            this.Hide();
         }
 
         private void соревнованияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Competitions().Show();
+            this.Hide();
         }
 
         private void вкладВРазвитиеКружкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new MoneyGetting().Show();
+            this.Hide();
+        }
+
+        private void обновитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateForm();
         }
     }
 }

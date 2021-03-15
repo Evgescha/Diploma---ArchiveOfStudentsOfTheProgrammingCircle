@@ -269,6 +269,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "MoneyGetting";
             this.Text = "Вклад в развитие кружка";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MoneyGetting_FormClosing);
             this.Load += new System.EventHandler(this.MoneyGetting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);

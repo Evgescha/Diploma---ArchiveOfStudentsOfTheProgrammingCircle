@@ -79,5 +79,10 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         {
 
         }
+
+        private void Schooler_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Main.main.Show();
+        }
     }
 }

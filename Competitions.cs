@@ -103,5 +103,10 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         {
 
         }
+
+        private void Competitions_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Main.main.Show();
+        }
     }
 }
