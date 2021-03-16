@@ -507,6 +507,30 @@ FROM            темы INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MoneyFromSchoolerTableAdapter" GeneratorDataComponentClassName="MoneyFromSchoolerTableAdapter" Name="MoneyFromSchooler" UserDataComponentName="MoneyFromSchoolerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ArchiveOfStudentsOfTheProgrammingCircleConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        учащийся.Фамилия, учащийся.Имя, учащийся.Отчество, учащийся.Школа, учащийся.Класс, `вклад в развитие`.Дата, `вклад в развитие`.Вклад
+FROM            учащийся INNER JOIN
+                         `вклад в развитие` ON учащийся.Код = `вклад в развитие`.Учащийся</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Фамилия" DataSetColumn="Фамилия" />
+              <Mapping SourceColumn="Имя" DataSetColumn="Имя" />
+              <Mapping SourceColumn="Отчество" DataSetColumn="Отчество" />
+              <Mapping SourceColumn="Школа" DataSetColumn="Школа" />
+              <Mapping SourceColumn="Класс" DataSetColumn="Класс" />
+              <Mapping SourceColumn="Дата" DataSetColumn="Дата" />
+              <Mapping SourceColumn="Вклад" DataSetColumn="Вклад" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -693,6 +717,49 @@ FROM            темы INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MoneyFromSchooler" msprop:Generator_TableClassName="MoneyFromSchoolerDataTable" msprop:Generator_TableVarName="tableMoneyFromSchooler" msprop:Generator_TablePropName="MoneyFromSchooler" msprop:Generator_RowDeletingName="MoneyFromSchoolerRowDeleting" msprop:Generator_RowChangingName="MoneyFromSchoolerRowChanging" msprop:Generator_RowEvHandlerName="MoneyFromSchoolerRowChangeEventHandler" msprop:Generator_RowDeletedName="MoneyFromSchoolerRowDeleted" msprop:Generator_UserTableName="MoneyFromSchooler" msprop:Generator_RowChangedName="MoneyFromSchoolerRowChanged" msprop:Generator_RowEvArgName="MoneyFromSchoolerRowChangeEvent" msprop:Generator_RowClassName="MoneyFromSchoolerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Фамилия" msprop:Generator_ColumnVarNameInTable="columnФамилия" msprop:Generator_ColumnPropNameInRow="Фамилия" msprop:Generator_ColumnPropNameInTable="ФамилияColumn" msprop:Generator_UserColumnName="Фамилия" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Имя" msprop:Generator_ColumnVarNameInTable="columnИмя" msprop:Generator_ColumnPropNameInRow="Имя" msprop:Generator_ColumnPropNameInTable="ИмяColumn" msprop:Generator_UserColumnName="Имя" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Отчество" msprop:Generator_ColumnVarNameInTable="columnОтчество" msprop:Generator_ColumnPropNameInRow="Отчество" msprop:Generator_ColumnPropNameInTable="ОтчествоColumn" msprop:Generator_UserColumnName="Отчество" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Школа" msprop:Generator_ColumnVarNameInTable="columnШкола" msprop:Generator_ColumnPropNameInRow="Школа" msprop:Generator_ColumnPropNameInTable="ШколаColumn" msprop:Generator_UserColumnName="Школа" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Класс" msprop:Generator_ColumnVarNameInTable="columnКласс" msprop:Generator_ColumnPropNameInRow="Класс" msprop:Generator_ColumnPropNameInTable="КлассColumn" msprop:Generator_UserColumnName="Класс" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Дата" msprop:Generator_ColumnVarNameInTable="columnДата" msprop:Generator_ColumnPropNameInRow="Дата" msprop:Generator_ColumnPropNameInTable="ДатаColumn" msprop:Generator_UserColumnName="Дата" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Вклад" msprop:Generator_ColumnVarNameInTable="columnВклад" msprop:Generator_ColumnPropNameInRow="Вклад" msprop:Generator_ColumnPropNameInTable="ВкладColumn" msprop:Generator_UserColumnName="Вклад" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

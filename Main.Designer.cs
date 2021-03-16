@@ -34,8 +34,6 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.темыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.archiveOfStudentsOfTheProgrammingCircleDataSet = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,14 +46,9 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.описаниеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
-            this.журналОценокibfk2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
@@ -68,12 +61,6 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.кодDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.учащийсяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.учащийсяBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.темаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.оценкаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.присутствалDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.учащиесяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.соревнованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,22 +70,36 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.вкладыУчащихсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.темыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.archiveOfStudentsOfTheProgrammingCircleDataSet = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSet();
+            this.учащийсяBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.описаниеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.темыTableAdapter = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.темыTableAdapter();
             this.журнал_оценокTableAdapter = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.журнал_оценокTableAdapter();
             this.учащийсяTableAdapter = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.учащийсяTableAdapter();
+            this.журналОценокibfk2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.кодDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.учащийсяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.темаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.оценкаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.присутствалDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.темыBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.archiveOfStudentsOfTheProgrammingCircleDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.журналОценокibfk2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.учащийсяBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.темыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.archiveOfStudentsOfTheProgrammingCircleDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.учащийсяBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.журналОценокibfk2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -152,16 +153,6 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // темыBindingSource
-            // 
-            this.темыBindingSource.DataMember = "темы";
-            this.темыBindingSource.DataSource = this.archiveOfStudentsOfTheProgrammingCircleDataSet;
-            // 
-            // archiveOfStudentsOfTheProgrammingCircleDataSet
-            // 
-            this.archiveOfStudentsOfTheProgrammingCircleDataSet.DataSetName = "ArchiveOfStudentsOfTheProgrammingCircleDataSet";
-            this.archiveOfStudentsOfTheProgrammingCircleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -269,35 +260,6 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.dataGridView1.Size = new System.Drawing.Size(505, 172);
             this.dataGridView1.TabIndex = 1;
             // 
-            // кодDataGridViewTextBoxColumn
-            // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
-            this.кодDataGridViewTextBoxColumn.Visible = false;
-            this.кодDataGridViewTextBoxColumn.Width = 51;
-            // 
-            // названиеDataGridViewTextBoxColumn
-            // 
-            this.названиеDataGridViewTextBoxColumn.DataPropertyName = "Название";
-            this.названиеDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.названиеDataGridViewTextBoxColumn.Name = "названиеDataGridViewTextBoxColumn";
-            this.названиеDataGridViewTextBoxColumn.Width = 82;
-            // 
-            // датаDataGridViewTextBoxColumn
-            // 
-            this.датаDataGridViewTextBoxColumn.DataPropertyName = "Дата";
-            this.датаDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.датаDataGridViewTextBoxColumn.Name = "датаDataGridViewTextBoxColumn";
-            this.датаDataGridViewTextBoxColumn.Width = 58;
-            // 
-            // описаниеDataGridViewTextBoxColumn
-            // 
-            this.описаниеDataGridViewTextBoxColumn.DataPropertyName = "Описание";
-            this.описаниеDataGridViewTextBoxColumn.HeaderText = "Описание";
-            this.описаниеDataGridViewTextBoxColumn.Name = "описаниеDataGridViewTextBoxColumn";
-            this.описаниеDataGridViewTextBoxColumn.Width = 82;
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -350,11 +312,6 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem1.Text = "Добавить";
-            // 
-            // журналОценокibfk2BindingSource
-            // 
-            this.журналОценокibfk2BindingSource.DataMember = "журнал оценок_ibfk_2";
-            this.журналОценокibfk2BindingSource.DataSource = this.темыBindingSource;
             // 
             // bindingNavigatorCountItem1
             // 
@@ -464,54 +421,6 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);
             // 
-            // кодDataGridViewTextBoxColumn1
-            // 
-            this.кодDataGridViewTextBoxColumn1.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn1.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn1.Name = "кодDataGridViewTextBoxColumn1";
-            this.кодDataGridViewTextBoxColumn1.Visible = false;
-            this.кодDataGridViewTextBoxColumn1.Width = 51;
-            // 
-            // учащийсяDataGridViewTextBoxColumn
-            // 
-            this.учащийсяDataGridViewTextBoxColumn.DataPropertyName = "Учащийся";
-            this.учащийсяDataGridViewTextBoxColumn.DataSource = this.учащийсяBindingSource;
-            this.учащийсяDataGridViewTextBoxColumn.DisplayMember = "Фамилия";
-            this.учащийсяDataGridViewTextBoxColumn.HeaderText = "Учащийся";
-            this.учащийсяDataGridViewTextBoxColumn.Name = "учащийсяDataGridViewTextBoxColumn";
-            this.учащийсяDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.учащийсяDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.учащийсяDataGridViewTextBoxColumn.ValueMember = "Код";
-            this.учащийсяDataGridViewTextBoxColumn.Width = 84;
-            // 
-            // учащийсяBindingSource
-            // 
-            this.учащийсяBindingSource.DataMember = "учащийся";
-            this.учащийсяBindingSource.DataSource = this.archiveOfStudentsOfTheProgrammingCircleDataSet;
-            // 
-            // темаDataGridViewTextBoxColumn
-            // 
-            this.темаDataGridViewTextBoxColumn.DataPropertyName = "Тема";
-            this.темаDataGridViewTextBoxColumn.HeaderText = "Тема";
-            this.темаDataGridViewTextBoxColumn.Name = "темаDataGridViewTextBoxColumn";
-            this.темаDataGridViewTextBoxColumn.Visible = false;
-            this.темаDataGridViewTextBoxColumn.Width = 59;
-            // 
-            // оценкаDataGridViewTextBoxColumn
-            // 
-            this.оценкаDataGridViewTextBoxColumn.DataPropertyName = "Оценка";
-            this.оценкаDataGridViewTextBoxColumn.HeaderText = "Оценка";
-            this.оценкаDataGridViewTextBoxColumn.Name = "оценкаDataGridViewTextBoxColumn";
-            this.оценкаDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // присутствалDataGridViewCheckBoxColumn
-            // 
-            this.присутствалDataGridViewCheckBoxColumn.DataPropertyName = "Присутствал";
-            this.присутствалDataGridViewCheckBoxColumn.HeaderText = "Присутствал";
-            this.присутствалDataGridViewCheckBoxColumn.Name = "присутствалDataGridViewCheckBoxColumn";
-            this.присутствалDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.присутствалDataGridViewCheckBoxColumn.Width = 78;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -550,7 +459,8 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             // отчетыToolStripMenuItem
             // 
             this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.первыйToolStripMenuItem});
+            this.первыйToolStripMenuItem,
+            this.вкладыУчащихсяToolStripMenuItem});
             this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
             this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.отчетыToolStripMenuItem.Text = "Отчеты";
@@ -589,6 +499,57 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // вкладыУчащихсяToolStripMenuItem
+            // 
+            this.вкладыУчащихсяToolStripMenuItem.Name = "вкладыУчащихсяToolStripMenuItem";
+            this.вкладыУчащихсяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вкладыУчащихсяToolStripMenuItem.Text = "Вклады учащихся";
+            this.вкладыУчащихсяToolStripMenuItem.Click += new System.EventHandler(this.вкладыУчащихсяToolStripMenuItem_Click);
+            // 
+            // темыBindingSource
+            // 
+            this.темыBindingSource.DataMember = "темы";
+            this.темыBindingSource.DataSource = this.archiveOfStudentsOfTheProgrammingCircleDataSet;
+            // 
+            // archiveOfStudentsOfTheProgrammingCircleDataSet
+            // 
+            this.archiveOfStudentsOfTheProgrammingCircleDataSet.DataSetName = "ArchiveOfStudentsOfTheProgrammingCircleDataSet";
+            this.archiveOfStudentsOfTheProgrammingCircleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // учащийсяBindingSource
+            // 
+            this.учащийсяBindingSource.DataMember = "учащийся";
+            this.учащийсяBindingSource.DataSource = this.archiveOfStudentsOfTheProgrammingCircleDataSet;
+            // 
+            // кодDataGridViewTextBoxColumn
+            // 
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            this.кодDataGridViewTextBoxColumn.Visible = false;
+            this.кодDataGridViewTextBoxColumn.Width = 51;
+            // 
+            // названиеDataGridViewTextBoxColumn
+            // 
+            this.названиеDataGridViewTextBoxColumn.DataPropertyName = "Название";
+            this.названиеDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.названиеDataGridViewTextBoxColumn.Name = "названиеDataGridViewTextBoxColumn";
+            this.названиеDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // датаDataGridViewTextBoxColumn
+            // 
+            this.датаDataGridViewTextBoxColumn.DataPropertyName = "Дата";
+            this.датаDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.датаDataGridViewTextBoxColumn.Name = "датаDataGridViewTextBoxColumn";
+            this.датаDataGridViewTextBoxColumn.Width = 58;
+            // 
+            // описаниеDataGridViewTextBoxColumn
+            // 
+            this.описаниеDataGridViewTextBoxColumn.DataPropertyName = "Описание";
+            this.описаниеDataGridViewTextBoxColumn.HeaderText = "Описание";
+            this.описаниеDataGridViewTextBoxColumn.Name = "описаниеDataGridViewTextBoxColumn";
+            this.описаниеDataGridViewTextBoxColumn.Width = 82;
+            // 
             // темыTableAdapter
             // 
             this.темыTableAdapter.ClearBeforeFill = true;
@@ -600,6 +561,54 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             // учащийсяTableAdapter
             // 
             this.учащийсяTableAdapter.ClearBeforeFill = true;
+            // 
+            // журналОценокibfk2BindingSource
+            // 
+            this.журналОценокibfk2BindingSource.DataMember = "журнал оценок_ibfk_2";
+            this.журналОценокibfk2BindingSource.DataSource = this.темыBindingSource;
+            // 
+            // кодDataGridViewTextBoxColumn1
+            // 
+            this.кодDataGridViewTextBoxColumn1.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn1.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn1.Name = "кодDataGridViewTextBoxColumn1";
+            this.кодDataGridViewTextBoxColumn1.Visible = false;
+            this.кодDataGridViewTextBoxColumn1.Width = 51;
+            // 
+            // учащийсяDataGridViewTextBoxColumn
+            // 
+            this.учащийсяDataGridViewTextBoxColumn.DataPropertyName = "Учащийся";
+            this.учащийсяDataGridViewTextBoxColumn.DataSource = this.учащийсяBindingSource;
+            this.учащийсяDataGridViewTextBoxColumn.DisplayMember = "Фамилия";
+            this.учащийсяDataGridViewTextBoxColumn.HeaderText = "Учащийся";
+            this.учащийсяDataGridViewTextBoxColumn.Name = "учащийсяDataGridViewTextBoxColumn";
+            this.учащийсяDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.учащийсяDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.учащийсяDataGridViewTextBoxColumn.ValueMember = "Код";
+            this.учащийсяDataGridViewTextBoxColumn.Width = 84;
+            // 
+            // темаDataGridViewTextBoxColumn
+            // 
+            this.темаDataGridViewTextBoxColumn.DataPropertyName = "Тема";
+            this.темаDataGridViewTextBoxColumn.HeaderText = "Тема";
+            this.темаDataGridViewTextBoxColumn.Name = "темаDataGridViewTextBoxColumn";
+            this.темаDataGridViewTextBoxColumn.Visible = false;
+            this.темаDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // оценкаDataGridViewTextBoxColumn
+            // 
+            this.оценкаDataGridViewTextBoxColumn.DataPropertyName = "Оценка";
+            this.оценкаDataGridViewTextBoxColumn.HeaderText = "Оценка";
+            this.оценкаDataGridViewTextBoxColumn.Name = "оценкаDataGridViewTextBoxColumn";
+            this.оценкаDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // присутствалDataGridViewCheckBoxColumn
+            // 
+            this.присутствалDataGridViewCheckBoxColumn.DataPropertyName = "Присутствал";
+            this.присутствалDataGridViewCheckBoxColumn.HeaderText = "Присутствал";
+            this.присутствалDataGridViewCheckBoxColumn.Name = "присутствалDataGridViewCheckBoxColumn";
+            this.присутствалDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.присутствалDataGridViewCheckBoxColumn.Width = 78;
             // 
             // Main
             // 
@@ -620,19 +629,19 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.темыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.archiveOfStudentsOfTheProgrammingCircleDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.журналОценокibfk2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.учащийсяBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.темыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.archiveOfStudentsOfTheProgrammingCircleDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.учащийсяBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.журналОценокibfk2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -695,6 +704,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem первыйToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вкладыУчащихсяToolStripMenuItem;
     }
 }
 
