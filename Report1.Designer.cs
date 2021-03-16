@@ -33,17 +33,17 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ArchiveOfStudentsOfTheProgrammingCircleDataSet = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSet();
-            this.журнал_оценокBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.журнал_оценокTableAdapter = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.журнал_оценокTableAdapter();
+            this.SchoolerThemeTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SchoolerThemeTableTableAdapter = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.SchoolerThemeTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ArchiveOfStudentsOfTheProgrammingCircleDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.журнал_оценокBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SchoolerThemeTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.журнал_оценокBindingSource;
+            reportDataSource2.Name = "SchoolerThemeDataSet";
+            reportDataSource2.Value = this.SchoolerThemeTableBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ArchiveOfStudentsOfTheProgrammingCircle.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -57,14 +57,14 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.ArchiveOfStudentsOfTheProgrammingCircleDataSet.DataSetName = "ArchiveOfStudentsOfTheProgrammingCircleDataSet";
             this.ArchiveOfStudentsOfTheProgrammingCircleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // журнал_оценокBindingSource
+            // SchoolerThemeTableBindingSource
             // 
-            this.журнал_оценокBindingSource.DataMember = "журнал оценок";
-            this.журнал_оценокBindingSource.DataSource = this.ArchiveOfStudentsOfTheProgrammingCircleDataSet;
+            this.SchoolerThemeTableBindingSource.DataMember = "SchoolerThemeTable";
+            this.SchoolerThemeTableBindingSource.DataSource = this.ArchiveOfStudentsOfTheProgrammingCircleDataSet;
             // 
-            // журнал_оценокTableAdapter
+            // SchoolerThemeTableTableAdapter
             // 
-            this.журнал_оценокTableAdapter.ClearBeforeFill = true;
+            this.SchoolerThemeTableTableAdapter.ClearBeforeFill = true;
             // 
             // Report1
             // 
@@ -73,19 +73,18 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Report1";
-            this.Text = "Отчет по оценкам";
+            this.Text = "Оценки учащихся";
             this.Load += new System.EventHandler(this.Report1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ArchiveOfStudentsOfTheProgrammingCircleDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.журнал_оценокBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SchoolerThemeTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource журнал_оценокBindingSource;
+        private System.Windows.Forms.BindingSource SchoolerThemeTableBindingSource;
         private ArchiveOfStudentsOfTheProgrammingCircleDataSet ArchiveOfStudentsOfTheProgrammingCircleDataSet;
-        private ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.журнал_оценокTableAdapter журнал_оценокTableAdapter;
+        private ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.SchoolerThemeTableTableAdapter SchoolerThemeTableTableAdapter;
     }
 }

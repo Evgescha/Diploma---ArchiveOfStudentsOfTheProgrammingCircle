@@ -19,9 +19,8 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
 
         private void Report1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "ArchiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок". При необходимости она может быть перемещена или удалена.
-            this.журнал_оценокTableAdapter.Fill(this.ArchiveOfStudentsOfTheProgrammingCircleDataSet.журнал_оценок);
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "ArchiveOfStudentsOfTheProgrammingCircleDataSet.SchoolerThemeTable". При необходимости она может быть перемещена или удалена.
+            this.SchoolerThemeTableTableAdapter.Fill(this.ArchiveOfStudentsOfTheProgrammingCircleDataSet.SchoolerThemeTable);
             this.reportViewer1.RefreshReport();
         }
     }

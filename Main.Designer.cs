@@ -79,13 +79,13 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.соревнованияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вкладВРазвитиеКружкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.первыйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.темыTableAdapter = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.темыTableAdapter();
             this.журнал_оценокTableAdapter = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.журнал_оценокTableAdapter();
             this.учащийсяTableAdapter = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSetTableAdapters.учащийсяTableAdapter();
-            this.первыйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -555,6 +555,13 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.отчетыToolStripMenuItem.Text = "Отчеты";
             // 
+            // первыйToolStripMenuItem
+            // 
+            this.первыйToolStripMenuItem.Name = "первыйToolStripMenuItem";
+            this.первыйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.первыйToolStripMenuItem.Text = "Оценки учащихся";
+            this.первыйToolStripMenuItem.Click += new System.EventHandler(this.первыйToolStripMenuItem_Click);
+            // 
             // обновитьToolStripMenuItem
             // 
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
@@ -593,13 +600,6 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             // учащийсяTableAdapter
             // 
             this.учащийсяTableAdapter.ClearBeforeFill = true;
-            // 
-            // первыйToolStripMenuItem
-            // 
-            this.первыйToolStripMenuItem.Name = "первыйToolStripMenuItem";
-            this.первыйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.первыйToolStripMenuItem.Text = "Первый";
-            this.первыйToolStripMenuItem.Click += new System.EventHandler(this.первыйToolStripMenuItem_Click);
             // 
             // Main
             // 
