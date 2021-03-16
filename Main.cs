@@ -119,5 +119,10 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         {
             new Report2().Show();
         }
+
+        private void соревнованияToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new Report3().Show();
+        }
     }
 }

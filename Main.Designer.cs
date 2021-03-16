@@ -67,10 +67,10 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.вкладВРазвитиеКружкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.первыйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вкладыУчащихсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.вкладыУчащихсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.темыBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.archiveOfStudentsOfTheProgrammingCircleDataSet = new ArchiveOfStudentsOfTheProgrammingCircle.ArchiveOfStudentsOfTheProgrammingCircleDataSet();
             this.учащийсяBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -87,6 +87,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.темаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.оценкаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.присутствалDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.соревнованияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -108,9 +109,9 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.bindingNavigator1);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 84);
+            this.groupBox1.Location = new System.Drawing.Point(12, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(517, 222);
+            this.groupBox1.Size = new System.Drawing.Size(517, 239);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Темы";
@@ -257,7 +258,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.dataGridView1.DataSource = this.темыBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 44);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(505, 172);
+            this.dataGridView1.Size = new System.Drawing.Size(505, 189);
             this.dataGridView1.TabIndex = 1;
             // 
             // groupBox2
@@ -460,7 +461,8 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             // 
             this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.первыйToolStripMenuItem,
-            this.вкладыУчащихсяToolStripMenuItem});
+            this.вкладыУчащихсяToolStripMenuItem,
+            this.соревнованияToolStripMenuItem1});
             this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
             this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.отчетыToolStripMenuItem.Text = "Отчеты";
@@ -471,6 +473,13 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.первыйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.первыйToolStripMenuItem.Text = "Оценки учащихся";
             this.первыйToolStripMenuItem.Click += new System.EventHandler(this.первыйToolStripMenuItem_Click);
+            // 
+            // вкладыУчащихсяToolStripMenuItem
+            // 
+            this.вкладыУчащихсяToolStripMenuItem.Name = "вкладыУчащихсяToolStripMenuItem";
+            this.вкладыУчащихсяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вкладыУчащихсяToolStripMenuItem.Text = "Вклады учащихся";
+            this.вкладыУчащихсяToolStripMenuItem.Click += new System.EventHandler(this.вкладыУчащихсяToolStripMenuItem_Click);
             // 
             // обновитьToolStripMenuItem
             // 
@@ -498,13 +507,6 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.button1.Text = "Найти тему";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // вкладыУчащихсяToolStripMenuItem
-            // 
-            this.вкладыУчащихсяToolStripMenuItem.Name = "вкладыУчащихсяToolStripMenuItem";
-            this.вкладыУчащихсяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.вкладыУчащихсяToolStripMenuItem.Text = "Вклады учащихся";
-            this.вкладыУчащихсяToolStripMenuItem.Click += new System.EventHandler(this.вкладыУчащихсяToolStripMenuItem_Click);
             // 
             // темыBindingSource
             // 
@@ -610,6 +612,13 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
             this.присутствалDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.присутствалDataGridViewCheckBoxColumn.Width = 78;
             // 
+            // соревнованияToolStripMenuItem1
+            // 
+            this.соревнованияToolStripMenuItem1.Name = "соревнованияToolStripMenuItem1";
+            this.соревнованияToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.соревнованияToolStripMenuItem1.Text = "Соревнования";
+            this.соревнованияToolStripMenuItem1.Click += new System.EventHandler(this.соревнованияToolStripMenuItem1_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -705,6 +714,7 @@ namespace ArchiveOfStudentsOfTheProgrammingCircle
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem первыйToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вкладыУчащихсяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem соревнованияToolStripMenuItem1;
     }
 }
 

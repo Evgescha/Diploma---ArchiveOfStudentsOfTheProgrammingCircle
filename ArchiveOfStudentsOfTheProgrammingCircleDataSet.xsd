@@ -531,6 +531,38 @@ FROM            учащийся INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CompetentionsSchoolerTableAdapter" GeneratorDataComponentClassName="CompetentionsSchoolerTableAdapter" Name="CompetentionsSchooler" UserDataComponentName="CompetentionsSchoolerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ArchiveOfStudentsOfTheProgrammingCircleConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        соревнование.Название, соревнование.Вид, соревнование.Описание, соревнование.Дата, соревнование.Время, соревнование.Адрес, учащийся.Фамилия, учащийся.Имя, учащийся.Отчество, учащийся.Класс, `участники сорвевнований`.Место, `участники сорвевнований`.Участник, `участники сорвевнований`.Соревнование, `участники сорвевнований`.Код
+FROM            соревнование INNER JOIN
+                         `участники сорвевнований` ON соревнование.Код = `участники сорвевнований`.Соревнование INNER JOIN
+                         учащийся ON `участники сорвевнований`.Участник = учащийся.Код</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Название" DataSetColumn="Название" />
+              <Mapping SourceColumn="Вид" DataSetColumn="Вид" />
+              <Mapping SourceColumn="Описание" DataSetColumn="Описание" />
+              <Mapping SourceColumn="Дата" DataSetColumn="Дата" />
+              <Mapping SourceColumn="Время" DataSetColumn="Время" />
+              <Mapping SourceColumn="Адрес" DataSetColumn="Адрес" />
+              <Mapping SourceColumn="Фамилия" DataSetColumn="Фамилия" />
+              <Mapping SourceColumn="Имя" DataSetColumn="Имя" />
+              <Mapping SourceColumn="Отчество" DataSetColumn="Отчество" />
+              <Mapping SourceColumn="Класс" DataSetColumn="Класс" />
+              <Mapping SourceColumn="Место" DataSetColumn="Место" />
+              <Mapping SourceColumn="Участник" DataSetColumn="Участник" />
+              <Mapping SourceColumn="Соревнование" DataSetColumn="Соревнование" />
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -539,7 +571,7 @@ FROM            учащийся INNER JOIN
   <xs:element name="ArchiveOfStudentsOfTheProgrammingCircleDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ArchiveOfStudentsOfTheProgrammingCircleDataSet" msprop:Generator_UserDSName="ArchiveOfStudentsOfTheProgrammingCircleDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="виды_x0020_соревнований" msprop:Generator_TableClassName="виды_соревнованийDataTable" msprop:Generator_TableVarName="tableвиды_соревнований" msprop:Generator_RowChangedName="виды_соревнованийRowChanged" msprop:Generator_TablePropName="виды_соревнований" msprop:Generator_RowDeletingName="виды_соревнованийRowDeleting" msprop:Generator_RowChangingName="виды_соревнованийRowChanging" msprop:Generator_RowEvHandlerName="виды_соревнованийRowChangeEventHandler" msprop:Generator_RowDeletedName="виды_соревнованийRowDeleted" msprop:Generator_RowClassName="виды_соревнованийRow" msprop:Generator_UserTableName="виды соревнований" msprop:Generator_RowEvArgName="виды_соревнованийRowChangeEvent">
+        <xs:element name="виды_x0020_соревнований" msprop:Generator_TableClassName="виды_соревнованийDataTable" msprop:Generator_TableVarName="tableвиды_соревнований" msprop:Generator_TablePropName="виды_соревнований" msprop:Generator_RowDeletingName="виды_соревнованийRowDeleting" msprop:Generator_RowChangingName="виды_соревнованийRowChanging" msprop:Generator_RowEvHandlerName="виды_соревнованийRowChangeEventHandler" msprop:Generator_RowDeletedName="виды_соревнованийRowDeleted" msprop:Generator_UserTableName="виды соревнований" msprop:Generator_RowChangedName="виды_соревнованийRowChanged" msprop:Generator_RowEvArgName="виды_соревнованийRowChangeEvent" msprop:Generator_RowClassName="виды_соревнованийRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Название" msprop:Generator_ColumnVarNameInTable="columnНазвание" msprop:Generator_ColumnPropNameInRow="Название" msprop:Generator_ColumnPropNameInTable="НазваниеColumn" msprop:Generator_UserColumnName="Название">
@@ -552,7 +584,7 @@ FROM            учащийся INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="вклад_x0020_в_x0020_развитие" msprop:Generator_TableClassName="вклад_в_развитиеDataTable" msprop:Generator_TableVarName="tableвклад_в_развитие" msprop:Generator_RowChangedName="вклад_в_развитиеRowChanged" msprop:Generator_TablePropName="вклад_в_развитие" msprop:Generator_RowDeletingName="вклад_в_развитиеRowDeleting" msprop:Generator_RowChangingName="вклад_в_развитиеRowChanging" msprop:Generator_RowEvHandlerName="вклад_в_развитиеRowChangeEventHandler" msprop:Generator_RowDeletedName="вклад_в_развитиеRowDeleted" msprop:Generator_RowClassName="вклад_в_развитиеRow" msprop:Generator_UserTableName="вклад в развитие" msprop:Generator_RowEvArgName="вклад_в_развитиеRowChangeEvent">
+        <xs:element name="вклад_x0020_в_x0020_развитие" msprop:Generator_TableClassName="вклад_в_развитиеDataTable" msprop:Generator_TableVarName="tableвклад_в_развитие" msprop:Generator_TablePropName="вклад_в_развитие" msprop:Generator_RowDeletingName="вклад_в_развитиеRowDeleting" msprop:Generator_RowChangingName="вклад_в_развитиеRowChanging" msprop:Generator_RowEvHandlerName="вклад_в_развитиеRowChangeEventHandler" msprop:Generator_RowDeletedName="вклад_в_развитиеRowDeleted" msprop:Generator_UserTableName="вклад в развитие" msprop:Generator_RowChangedName="вклад_в_развитиеRowChanged" msprop:Generator_RowEvArgName="вклад_в_развитиеRowChangeEvent" msprop:Generator_RowClassName="вклад_в_развитиеRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Код" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
@@ -562,7 +594,7 @@ FROM            учащийся INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="журнал_x0020_оценок" msprop:Generator_TableClassName="журнал_оценокDataTable" msprop:Generator_TableVarName="tableжурнал_оценок" msprop:Generator_RowChangedName="журнал_оценокRowChanged" msprop:Generator_TablePropName="журнал_оценок" msprop:Generator_RowDeletingName="журнал_оценокRowDeleting" msprop:Generator_RowChangingName="журнал_оценокRowChanging" msprop:Generator_RowEvHandlerName="журнал_оценокRowChangeEventHandler" msprop:Generator_RowDeletedName="журнал_оценокRowDeleted" msprop:Generator_RowClassName="журнал_оценокRow" msprop:Generator_UserTableName="журнал оценок" msprop:Generator_RowEvArgName="журнал_оценокRowChangeEvent">
+        <xs:element name="журнал_x0020_оценок" msprop:Generator_TableClassName="журнал_оценокDataTable" msprop:Generator_TableVarName="tableжурнал_оценок" msprop:Generator_TablePropName="журнал_оценок" msprop:Generator_RowDeletingName="журнал_оценокRowDeleting" msprop:Generator_RowChangingName="журнал_оценокRowChanging" msprop:Generator_RowEvHandlerName="журнал_оценокRowChangeEventHandler" msprop:Generator_RowDeletedName="журнал_оценокRowDeleted" msprop:Generator_UserTableName="журнал оценок" msprop:Generator_RowChangedName="журнал_оценокRowChanged" msprop:Generator_RowEvArgName="журнал_оценокRowChangeEvent" msprop:Generator_RowClassName="журнал_оценокRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Код" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
@@ -573,7 +605,7 @@ FROM            учащийся INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="соревнование" msprop:Generator_TableClassName="соревнованиеDataTable" msprop:Generator_TableVarName="tableсоревнование" msprop:Generator_RowChangedName="соревнованиеRowChanged" msprop:Generator_TablePropName="соревнование" msprop:Generator_RowDeletingName="соревнованиеRowDeleting" msprop:Generator_RowChangingName="соревнованиеRowChanging" msprop:Generator_RowEvHandlerName="соревнованиеRowChangeEventHandler" msprop:Generator_RowDeletedName="соревнованиеRowDeleted" msprop:Generator_RowClassName="соревнованиеRow" msprop:Generator_UserTableName="соревнование" msprop:Generator_RowEvArgName="соревнованиеRowChangeEvent">
+        <xs:element name="соревнование" msprop:Generator_TableClassName="соревнованиеDataTable" msprop:Generator_TableVarName="tableсоревнование" msprop:Generator_TablePropName="соревнование" msprop:Generator_RowDeletingName="соревнованиеRowDeleting" msprop:Generator_RowChangingName="соревнованиеRowChanging" msprop:Generator_RowEvHandlerName="соревнованиеRowChangeEventHandler" msprop:Generator_RowDeletedName="соревнованиеRowDeleted" msprop:Generator_UserTableName="соревнование" msprop:Generator_RowChangedName="соревнованиеRowChanged" msprop:Generator_RowEvArgName="соревнованиеRowChangeEvent" msprop:Generator_RowClassName="соревнованиеRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Код" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
@@ -610,7 +642,7 @@ FROM            учащийся INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="темы" msprop:Generator_TableClassName="темыDataTable" msprop:Generator_TableVarName="tableтемы" msprop:Generator_RowChangedName="темыRowChanged" msprop:Generator_TablePropName="темы" msprop:Generator_RowDeletingName="темыRowDeleting" msprop:Generator_RowChangingName="темыRowChanging" msprop:Generator_RowEvHandlerName="темыRowChangeEventHandler" msprop:Generator_RowDeletedName="темыRowDeleted" msprop:Generator_RowClassName="темыRow" msprop:Generator_UserTableName="темы" msprop:Generator_RowEvArgName="темыRowChangeEvent">
+        <xs:element name="темы" msprop:Generator_TableClassName="темыDataTable" msprop:Generator_TableVarName="tableтемы" msprop:Generator_TablePropName="темы" msprop:Generator_RowDeletingName="темыRowDeleting" msprop:Generator_RowChangingName="темыRowChanging" msprop:Generator_RowEvHandlerName="темыRowChangeEventHandler" msprop:Generator_RowDeletedName="темыRowDeleted" msprop:Generator_UserTableName="темы" msprop:Generator_RowChangedName="темыRowChanged" msprop:Generator_RowEvArgName="темыRowChangeEvent" msprop:Generator_RowClassName="темыRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Код" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
@@ -632,7 +664,7 @@ FROM            учащийся INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="участники_x0020_сорвевнований" msprop:Generator_TableClassName="участники_сорвевнованийDataTable" msprop:Generator_TableVarName="tableучастники_сорвевнований" msprop:Generator_RowChangedName="участники_сорвевнованийRowChanged" msprop:Generator_TablePropName="участники_сорвевнований" msprop:Generator_RowDeletingName="участники_сорвевнованийRowDeleting" msprop:Generator_RowChangingName="участники_сорвевнованийRowChanging" msprop:Generator_RowEvHandlerName="участники_сорвевнованийRowChangeEventHandler" msprop:Generator_RowDeletedName="участники_сорвевнованийRowDeleted" msprop:Generator_RowClassName="участники_сорвевнованийRow" msprop:Generator_UserTableName="участники сорвевнований" msprop:Generator_RowEvArgName="участники_сорвевнованийRowChangeEvent">
+        <xs:element name="участники_x0020_сорвевнований" msprop:Generator_TableClassName="участники_сорвевнованийDataTable" msprop:Generator_TableVarName="tableучастники_сорвевнований" msprop:Generator_TablePropName="участники_сорвевнований" msprop:Generator_RowDeletingName="участники_сорвевнованийRowDeleting" msprop:Generator_RowChangingName="участники_сорвевнованийRowChanging" msprop:Generator_RowEvHandlerName="участники_сорвевнованийRowChangeEventHandler" msprop:Generator_RowDeletedName="участники_сорвевнованийRowDeleted" msprop:Generator_UserTableName="участники сорвевнований" msprop:Generator_RowChangedName="участники_сорвевнованийRowChanged" msprop:Generator_RowEvArgName="участники_сорвевнованийRowChangeEvent" msprop:Generator_RowClassName="участники_сорвевнованийRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Код" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
@@ -642,7 +674,7 @@ FROM            учащийся INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="учащийся" msprop:Generator_TableClassName="учащийсяDataTable" msprop:Generator_TableVarName="tableучащийся" msprop:Generator_RowChangedName="учащийсяRowChanged" msprop:Generator_TablePropName="учащийся" msprop:Generator_RowDeletingName="учащийсяRowDeleting" msprop:Generator_RowChangingName="учащийсяRowChanging" msprop:Generator_RowEvHandlerName="учащийсяRowChangeEventHandler" msprop:Generator_RowDeletedName="учащийсяRowDeleted" msprop:Generator_RowClassName="учащийсяRow" msprop:Generator_UserTableName="учащийся" msprop:Generator_RowEvArgName="учащийсяRowChangeEvent">
+        <xs:element name="учащийся" msprop:Generator_TableClassName="учащийсяDataTable" msprop:Generator_TableVarName="tableучащийся" msprop:Generator_TablePropName="учащийся" msprop:Generator_RowDeletingName="учащийсяRowDeleting" msprop:Generator_RowChangingName="учащийсяRowChanging" msprop:Generator_RowEvHandlerName="учащийсяRowChangeEventHandler" msprop:Generator_RowDeletedName="учащийсяRowDeleted" msprop:Generator_UserTableName="учащийся" msprop:Generator_RowChangedName="учащийсяRowChanged" msprop:Generator_RowEvArgName="учащийсяRowChangeEvent" msprop:Generator_RowClassName="учащийсяRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Код" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
@@ -685,7 +717,7 @@ FROM            учащийся INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SchoolerThemeTable" msprop:Generator_TableClassName="SchoolerThemeTableDataTable" msprop:Generator_TableVarName="tableSchoolerThemeTable" msprop:Generator_TablePropName="SchoolerThemeTable" msprop:Generator_RowDeletingName="SchoolerThemeTableRowDeleting" msprop:Generator_RowChangingName="SchoolerThemeTableRowChanging" msprop:Generator_RowEvHandlerName="SchoolerThemeTableRowChangeEventHandler" msprop:Generator_RowDeletedName="SchoolerThemeTableRowDeleted" msprop:Generator_UserTableName="SchoolerThemeTable" msprop:Generator_RowChangedName="SchoolerThemeTableRowChanged" msprop:Generator_RowEvArgName="SchoolerThemeTableRowChangeEvent" msprop:Generator_RowClassName="SchoolerThemeTableRow">
+        <xs:element name="SchoolerThemeTable" msprop:Generator_TableClassName="SchoolerThemeTableDataTable" msprop:Generator_TableVarName="tableSchoolerThemeTable" msprop:Generator_RowChangedName="SchoolerThemeTableRowChanged" msprop:Generator_TablePropName="SchoolerThemeTable" msprop:Generator_RowDeletingName="SchoolerThemeTableRowDeleting" msprop:Generator_RowChangingName="SchoolerThemeTableRowChanging" msprop:Generator_RowEvHandlerName="SchoolerThemeTableRowChangeEventHandler" msprop:Generator_RowDeletedName="SchoolerThemeTableRowDeleted" msprop:Generator_RowClassName="SchoolerThemeTableRow" msprop:Generator_UserTableName="SchoolerThemeTable" msprop:Generator_RowEvArgName="SchoolerThemeTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Название" msprop:Generator_ColumnVarNameInTable="columnНазвание" msprop:Generator_ColumnPropNameInRow="Название" msprop:Generator_ColumnPropNameInTable="НазваниеColumn" msprop:Generator_UserColumnName="Название" minOccurs="0">
@@ -720,7 +752,7 @@ FROM            учащийся INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MoneyFromSchooler" msprop:Generator_TableClassName="MoneyFromSchoolerDataTable" msprop:Generator_TableVarName="tableMoneyFromSchooler" msprop:Generator_TablePropName="MoneyFromSchooler" msprop:Generator_RowDeletingName="MoneyFromSchoolerRowDeleting" msprop:Generator_RowChangingName="MoneyFromSchoolerRowChanging" msprop:Generator_RowEvHandlerName="MoneyFromSchoolerRowChangeEventHandler" msprop:Generator_RowDeletedName="MoneyFromSchoolerRowDeleted" msprop:Generator_UserTableName="MoneyFromSchooler" msprop:Generator_RowChangedName="MoneyFromSchoolerRowChanged" msprop:Generator_RowEvArgName="MoneyFromSchoolerRowChangeEvent" msprop:Generator_RowClassName="MoneyFromSchoolerRow">
+        <xs:element name="MoneyFromSchooler" msprop:Generator_TableClassName="MoneyFromSchoolerDataTable" msprop:Generator_TableVarName="tableMoneyFromSchooler" msprop:Generator_RowChangedName="MoneyFromSchoolerRowChanged" msprop:Generator_TablePropName="MoneyFromSchooler" msprop:Generator_RowDeletingName="MoneyFromSchoolerRowDeleting" msprop:Generator_RowChangingName="MoneyFromSchoolerRowChanging" msprop:Generator_RowEvHandlerName="MoneyFromSchoolerRowChangeEventHandler" msprop:Generator_RowDeletedName="MoneyFromSchoolerRowDeleted" msprop:Generator_RowClassName="MoneyFromSchoolerRow" msprop:Generator_UserTableName="MoneyFromSchooler" msprop:Generator_RowEvArgName="MoneyFromSchoolerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Фамилия" msprop:Generator_ColumnVarNameInTable="columnФамилия" msprop:Generator_ColumnPropNameInRow="Фамилия" msprop:Generator_ColumnPropNameInTable="ФамилияColumn" msprop:Generator_UserColumnName="Фамилия" minOccurs="0">
@@ -763,6 +795,74 @@ FROM            учащийся INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="CompetentionsSchooler" msprop:Generator_TableClassName="CompetentionsSchoolerDataTable" msprop:Generator_TableVarName="tableCompetentionsSchooler" msprop:Generator_TablePropName="CompetentionsSchooler" msprop:Generator_RowDeletingName="CompetentionsSchoolerRowDeleting" msprop:Generator_RowChangingName="CompetentionsSchoolerRowChanging" msprop:Generator_RowEvHandlerName="CompetentionsSchoolerRowChangeEventHandler" msprop:Generator_RowDeletedName="CompetentionsSchoolerRowDeleted" msprop:Generator_UserTableName="CompetentionsSchooler" msprop:Generator_RowChangedName="CompetentionsSchoolerRowChanged" msprop:Generator_RowEvArgName="CompetentionsSchoolerRowChangeEvent" msprop:Generator_RowClassName="CompetentionsSchoolerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Название" msprop:Generator_ColumnVarNameInTable="columnНазвание" msprop:Generator_ColumnPropNameInRow="Название" msprop:Generator_ColumnPropNameInTable="НазваниеColumn" msprop:Generator_UserColumnName="Название" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Вид" msprop:Generator_ColumnVarNameInTable="columnВид" msprop:Generator_ColumnPropNameInRow="Вид" msprop:Generator_ColumnPropNameInTable="ВидColumn" msprop:Generator_UserColumnName="Вид" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Описание" msprop:Generator_ColumnVarNameInTable="columnОписание" msprop:Generator_ColumnPropNameInRow="Описание" msprop:Generator_ColumnPropNameInTable="ОписаниеColumn" msprop:Generator_UserColumnName="Описание" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Дата" msprop:Generator_ColumnVarNameInTable="columnДата" msprop:Generator_ColumnPropNameInRow="Дата" msprop:Generator_ColumnPropNameInTable="ДатаColumn" msprop:Generator_UserColumnName="Дата" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Время" msprop:Generator_ColumnVarNameInTable="columnВремя" msprop:Generator_ColumnPropNameInRow="Время" msprop:Generator_ColumnPropNameInTable="ВремяColumn" msprop:Generator_UserColumnName="Время" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Адрес" msprop:Generator_ColumnVarNameInTable="columnАдрес" msprop:Generator_ColumnPropNameInRow="Адрес" msprop:Generator_ColumnPropNameInTable="АдресColumn" msprop:Generator_UserColumnName="Адрес" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Фамилия" msprop:Generator_ColumnVarNameInTable="columnФамилия" msprop:Generator_ColumnPropNameInRow="Фамилия" msprop:Generator_ColumnPropNameInTable="ФамилияColumn" msprop:Generator_UserColumnName="Фамилия" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Имя" msprop:Generator_ColumnVarNameInTable="columnИмя" msprop:Generator_ColumnPropNameInRow="Имя" msprop:Generator_ColumnPropNameInTable="ИмяColumn" msprop:Generator_UserColumnName="Имя" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Отчество" msprop:Generator_ColumnVarNameInTable="columnОтчество" msprop:Generator_ColumnPropNameInRow="Отчество" msprop:Generator_ColumnPropNameInTable="ОтчествоColumn" msprop:Generator_UserColumnName="Отчество" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Класс" msprop:Generator_ColumnVarNameInTable="columnКласс" msprop:Generator_ColumnPropNameInRow="Класс" msprop:Generator_ColumnPropNameInTable="КлассColumn" msprop:Generator_UserColumnName="Класс" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Место" msprop:Generator_ColumnVarNameInTable="columnМесто" msprop:Generator_ColumnPropNameInRow="Место" msprop:Generator_ColumnPropNameInTable="МестоColumn" msprop:Generator_UserColumnName="Место" type="xs:int" minOccurs="0" />
+              <xs:element name="Участник" msprop:Generator_ColumnVarNameInTable="columnУчастник" msprop:Generator_ColumnPropNameInRow="Участник" msprop:Generator_ColumnPropNameInTable="УчастникColumn" msprop:Generator_UserColumnName="Участник" type="xs:int" minOccurs="0" />
+              <xs:element name="Соревнование" msprop:Generator_ColumnVarNameInTable="columnСоревнование" msprop:Generator_ColumnPropNameInRow="Соревнование" msprop:Generator_ColumnPropNameInTable="СоревнованиеColumn" msprop:Generator_UserColumnName="Соревнование" type="xs:int" minOccurs="0" />
+              <xs:element name="Код" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -793,15 +893,21 @@ FROM            учащийся INNER JOIN
       <xs:selector xpath=".//mstns:учащийся" />
       <xs:field xpath="mstns:Код" />
     </xs:unique>
+    <xs:unique name="CompetentionsSchooler_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CompetentionsSchooler" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="вклад_x0020_в_x0020_развитие_ibfk_1" msdata:parent="учащийся" msdata:child="вклад_x0020_в_x0020_развитие" msdata:parentkey="Код" msdata:childkey="Учащийся" msprop:Generator_UserChildTable="вклад в развитие" msprop:Generator_ChildPropName="Getвклад_в_развитиеRows" msprop:Generator_UserRelationName="вклад в развитие_ibfk_1" msprop:Generator_ParentPropName="учащийсяRow" msprop:Generator_RelationVarName="relationвклад_в_развитие_ibfk_1" msprop:Generator_UserParentTable="учащийся" />
-      <msdata:Relationship name="журнал_x0020_оценок_ibfk_1" msdata:parent="учащийся" msdata:child="журнал_x0020_оценок" msdata:parentkey="Код" msdata:childkey="Учащийся" msprop:Generator_UserChildTable="журнал оценок" msprop:Generator_ChildPropName="Getжурнал_оценокRows" msprop:Generator_UserRelationName="журнал оценок_ibfk_1" msprop:Generator_ParentPropName="учащийсяRow" msprop:Generator_RelationVarName="relationжурнал_оценок_ibfk_1" msprop:Generator_UserParentTable="учащийся" />
-      <msdata:Relationship name="журнал_x0020_оценок_ibfk_2" msdata:parent="темы" msdata:child="журнал_x0020_оценок" msdata:parentkey="Код" msdata:childkey="Тема" msprop:Generator_UserChildTable="журнал оценок" msprop:Generator_ChildPropName="Getжурнал_оценокRows" msprop:Generator_UserRelationName="журнал оценок_ibfk_2" msprop:Generator_ParentPropName="темыRow" msprop:Generator_RelationVarName="relationжурнал_оценок_ibfk_2" msprop:Generator_UserParentTable="темы" />
-      <msdata:Relationship name="соревнование_ibfk_1" msdata:parent="виды_x0020_соревнований" msdata:child="соревнование" msdata:parentkey="Название" msdata:childkey="Вид" msprop:Generator_UserChildTable="соревнование" msprop:Generator_ChildPropName="GetсоревнованиеRows" msprop:Generator_UserRelationName="соревнование_ibfk_1" msprop:Generator_RelationVarName="relationсоревнование_ibfk_1" msprop:Generator_UserParentTable="виды соревнований" msprop:Generator_ParentPropName="виды_соревнованийRow" />
-      <msdata:Relationship name="участники_x0020_сорвевнований_ibfk_1" msdata:parent="соревнование" msdata:child="участники_x0020_сорвевнований" msdata:parentkey="Код" msdata:childkey="Соревнование" msprop:Generator_UserChildTable="участники сорвевнований" msprop:Generator_ChildPropName="Getучастники_сорвевнованийRows" msprop:Generator_UserRelationName="участники сорвевнований_ibfk_1" msprop:Generator_RelationVarName="relationучастники_сорвевнований_ibfk_1" msprop:Generator_UserParentTable="соревнование" msprop:Generator_ParentPropName="соревнованиеRow" />
-      <msdata:Relationship name="участники_x0020_сорвевнований_ibfk_2" msdata:parent="учащийся" msdata:child="участники_x0020_сорвевнований" msdata:parentkey="Код" msdata:childkey="Участник" msprop:Generator_UserChildTable="участники сорвевнований" msprop:Generator_ChildPropName="Getучастники_сорвевнованийRows" msprop:Generator_UserRelationName="участники сорвевнований_ibfk_2" msprop:Generator_ParentPropName="учащийсяRow" msprop:Generator_RelationVarName="relationучастники_сорвевнований_ibfk_2" msprop:Generator_UserParentTable="учащийся" />
+      <msdata:Relationship name="вклад_x0020_в_x0020_развитие_ibfk_1" msdata:parent="учащийся" msdata:child="вклад_x0020_в_x0020_развитие" msdata:parentkey="Код" msdata:childkey="Учащийся" msprop:Generator_UserChildTable="вклад в развитие" msprop:Generator_ChildPropName="Getвклад_в_развитиеRows" msprop:Generator_UserRelationName="вклад в развитие_ibfk_1" msprop:Generator_RelationVarName="relationвклад_в_развитие_ibfk_1" msprop:Generator_UserParentTable="учащийся" msprop:Generator_ParentPropName="учащийсяRow" />
+      <msdata:Relationship name="журнал_x0020_оценок_ibfk_1" msdata:parent="учащийся" msdata:child="журнал_x0020_оценок" msdata:parentkey="Код" msdata:childkey="Учащийся" msprop:Generator_UserChildTable="журнал оценок" msprop:Generator_ChildPropName="Getжурнал_оценокRows" msprop:Generator_UserRelationName="журнал оценок_ibfk_1" msprop:Generator_RelationVarName="relationжурнал_оценок_ibfk_1" msprop:Generator_UserParentTable="учащийся" msprop:Generator_ParentPropName="учащийсяRow" />
+      <msdata:Relationship name="журнал_x0020_оценок_ibfk_2" msdata:parent="темы" msdata:child="журнал_x0020_оценок" msdata:parentkey="Код" msdata:childkey="Тема" msprop:Generator_UserChildTable="журнал оценок" msprop:Generator_ChildPropName="Getжурнал_оценокRows" msprop:Generator_UserRelationName="журнал оценок_ibfk_2" msprop:Generator_RelationVarName="relationжурнал_оценок_ibfk_2" msprop:Generator_UserParentTable="темы" msprop:Generator_ParentPropName="темыRow" />
+      <msdata:Relationship name="соревнование_ibfk_1" msdata:parent="виды_x0020_соревнований" msdata:child="соревнование" msdata:parentkey="Название" msdata:childkey="Вид" msprop:Generator_UserChildTable="соревнование" msprop:Generator_ChildPropName="GetсоревнованиеRows" msprop:Generator_UserRelationName="соревнование_ibfk_1" msprop:Generator_ParentPropName="виды_соревнованийRow" msprop:Generator_RelationVarName="relationсоревнование_ibfk_1" msprop:Generator_UserParentTable="виды соревнований" />
+      <msdata:Relationship name="участники_x0020_сорвевнований_ibfk_1" msdata:parent="соревнование" msdata:child="участники_x0020_сорвевнований" msdata:parentkey="Код" msdata:childkey="Соревнование" msprop:Generator_UserChildTable="участники сорвевнований" msprop:Generator_ChildPropName="Getучастники_сорвевнованийRows" msprop:Generator_UserRelationName="участники сорвевнований_ibfk_1" msprop:Generator_ParentPropName="соревнованиеRow" msprop:Generator_RelationVarName="relationучастники_сорвевнований_ibfk_1" msprop:Generator_UserParentTable="соревнование" />
+      <msdata:Relationship name="участники_x0020_сорвевнований_ibfk_2" msdata:parent="учащийся" msdata:child="участники_x0020_сорвевнований" msdata:parentkey="Код" msdata:childkey="Участник" msprop:Generator_UserChildTable="участники сорвевнований" msprop:Generator_ChildPropName="Getучастники_сорвевнованийRows" msprop:Generator_UserRelationName="участники сорвевнований_ibfk_2" msprop:Generator_RelationVarName="relationучастники_сорвевнований_ibfk_2" msprop:Generator_UserParentTable="учащийся" msprop:Generator_ParentPropName="учащийсяRow" />
+      <msdata:Relationship name="участники_x0020_сорвевнований_ibfk_11" msdata:parent="соревнование" msdata:child="CompetentionsSchooler" msdata:parentkey="Код" msdata:childkey="Соревнование" msprop:Generator_UserChildTable="CompetentionsSchooler" msprop:Generator_ChildPropName="GetCompetentionsSchoolerRows" msprop:Generator_UserRelationName="участники сорвевнований_ibfk_11" msprop:Generator_ParentPropName="соревнованиеRow" msprop:Generator_RelationVarName="relationучастники_сорвевнований_ibfk_11" msprop:Generator_UserParentTable="соревнование" />
+      <msdata:Relationship name="участники_x0020_сорвевнований_ibfk_21" msdata:parent="учащийся" msdata:child="CompetentionsSchooler" msdata:parentkey="Код" msdata:childkey="Участник" msprop:Generator_UserChildTable="CompetentionsSchooler" msprop:Generator_ChildPropName="GetCompetentionsSchoolerRows" msprop:Generator_UserRelationName="участники сорвевнований_ibfk_21" msprop:Generator_ParentPropName="учащийсяRow" msprop:Generator_RelationVarName="relationучастники_сорвевнований_ibfk_21" msprop:Generator_UserParentTable="учащийся" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
